@@ -1,6 +1,5 @@
 import React from 'react'
 import {Link, withRouteData} from 'react-static'
-import moment from 'moment'
 import ReleaseTitle from './ReleaseTitle'
 import ReleaseContent from './ReleaseContent'
 
@@ -16,7 +15,7 @@ export default withRouteData(({releases}) => (
         <h2>{releases.length} releases and counting 🎉</h2>
         {releases.sort(sortReleases).map((release, index) =>
             <section key={index}>
-                <Link to={`/releases/${moment(release.date).format('YYYY-MM-DD')}`}>
+                <Link to={`/releases/${release.date}`}>
                     <ReleaseTitle release={release}/>
                 </Link>
                 <ReleaseContent release={release}/>
