@@ -10,9 +10,9 @@
     "serve": "serve dist -p 3000"
   },
   "dependencies": {
-    "chokidar": "2.0.3",
-    "htmr": "0.6.3",
-    "jdown": "^0.3.0",
+    "chokidar": "2.0.4",
+    "htmr": "0.7.0",
+    "jdown": "^0.6.4",
     "moment": "^2.22.2",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
@@ -23,6 +23,6 @@
   },
   "devDependencies": {
     "eslint-config-react-tools": "1.x.x",
-    "serve": "^6.1.0"
+    "serve": "^10.0.0"
   }
 }
