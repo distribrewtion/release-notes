@@ -16,12 +16,8 @@ export default {
                 path: '/',
                 component: 'src/components/HomePage',
                 getData: () => ({releases}),
-            },
-            {
-                path: '/releases',
-                getData: () => ({releases}),
                 children: releases.map(release => ({
-                    path: `${moment(release.date).format('YYYY-MM-DD')}`,
+                    path: `/releases/${moment(release.date).format('YYYY-MM-DD')}`,
                     component: 'src/components/ReleasePage',
                     getData: () => ({release}),
                 })),
