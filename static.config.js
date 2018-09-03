@@ -9,6 +9,7 @@ export default {
     getSiteData: () => ({
         title: 'Distribrewtion Releases',
     }),
+    siteRoot: 'https://releases.distribrewtion.com',
     getRoutes: async () => {
         const {releases} = await jdown('content');
         return [
