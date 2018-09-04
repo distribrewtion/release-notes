@@ -8,6 +8,7 @@ export default withRouteData(({release}) => (
         <Link to="/">
             <h1>Distribrewtion Releases</h1>
         </Link>
+        <hr/>
         <ReleaseTitle release={release}/>
         <ReleaseContent release={release}/>
     </React.Fragment>

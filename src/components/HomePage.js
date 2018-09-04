@@ -14,12 +14,15 @@ export default withRouteData(({releases}) => (
         <h1>Distribrewtion Releases</h1>
         <h2>{releases.length} releases and counting 🎉</h2>
         {releases.sort(sortReleases).map((release, index) =>
-            <section key={index}>
-                <Link to={`/releases/${release.date}`}>
-                    <ReleaseTitle release={release}/>
-                </Link>
-                <ReleaseContent release={release}/>
-            </section>
+            <React.Fragment>
+                <hr/>
+                <section key={index}>
+                    <Link to={`/releases/${release.date}`}>
+                        <ReleaseTitle release={release}/>
+                    </Link>
+                    <ReleaseContent release={release}/>
+                </section>
+            </React.Fragment>
         )}
     </React.Fragment>
 ))
