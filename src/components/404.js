@@ -2,8 +2,8 @@ import React from 'react'
 import {Link} from "react-static";
 
 export default () => (
-    <div>
+    <React.Fragment>
         <h1>Page not found.</h1>
         <Link to="/">Go Home</Link>
-    </div>
+    </React.Fragment>
 );

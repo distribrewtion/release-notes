@@ -10,7 +10,7 @@ const sortReleases = (a, b) => {
 };
 
 export default withRouteData(({releases}) => (
-    <div>
+    <React.Fragment>
         <h1>Distribrewtion Releases</h1>
         <h2>{releases.length} releases and counting 🎉</h2>
         {releases.sort(sortReleases).map((release, index) =>
@@ -21,5 +21,5 @@ export default withRouteData(({releases}) => (
                 <ReleaseContent release={release}/>
             </section>
         )}
-    </div>
+    </React.Fragment>
 ))

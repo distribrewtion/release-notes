@@ -4,11 +4,11 @@ import ReleaseTitle from "./ReleaseTitle";
 import ReleaseContent from "./ReleaseContent";
 
 export default withRouteData(({release}) => (
-    <div>
+    <React.Fragment>
         <Link to="/">
             <h1>Distribrewtion Releases</h1>
         </Link>
         <ReleaseTitle release={release}/>
         <ReleaseContent release={release}/>
-    </div>
+    </React.Fragment>
 ))
