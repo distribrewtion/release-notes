@@ -1,28 +1,37 @@
 {
-  "name": "react-static-example-basic",
-  "version": "1.0.1",
-  "main": "index.js",
-  "license": "MIT",
+  "name": "distribrewtion-release-notes",
+  "private": true,
   "scripts": {
     "start": "react-static start",
     "stage": "react-static build --staging",
     "build": "react-static build",
-    "serve": "serve dist -p 3000"
+    "bundle": "react-static bundle",
+    "export": "react-static export",
+    "serve": "serve dist -p 3000 -s"
   },
   "dependencies": {
-    "chokidar": "2.0.4",
-    "htmr": "0.7.0",
-    "jdown": "^0.6.4",
-    "moment": "^2.22.2",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
-    "react-hot-loader": "^4.0.0-beta.21",
-    "react-router": "^4.2.0",
-    "react-static": "^5.9.7",
-    "sanitize.css": "^7.0.1"
+    "@reach/router": "^1.2.1",
+    "jdown": "^1.0.3",
+    "moment": "^2.24.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-static": "^7.2.0",
+    "react-static-plugin-reach-router": "^7.2.0",
+    "react-static-plugin-sitemap": "^7.2.0",
+    "react-static-plugin-source-filesystem": "^7.2.0",
+    "react-static-plugin-typescript": "^7.2.0",
+    "sanitize.css": "^11.0.0",
+    "typeface-roboto": "^0.0.75"
   },
   "devDependencies": {
-    "eslint-config-react-tools": "1.x.x",
-    "serve": "^10.0.0"
+    "@types/node": "^12.7.2",
+    "@types/reach__router": "^1.2",
+    "@types/react": "^16.9.1",
+    "@types/react-dom": "^16.8.5",
+    "@types/react-hot-loader": "^4.1.0",
+    "@types/webpack-env": "^1.14.0",
+    "react-hot-loader": "^4.12.11",
+    "serve": "^11.1.0",
+    "typescript": "^3.5.3"
   }
 }
