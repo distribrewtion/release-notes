@@ -11,10 +11,11 @@ export const App = () => (
     <Root>
         <div className="app">
             <a href="https://distribrewtion.com" className="logo">
-                <img src={beer} className="logo-icon"/>
+                <img src={beer} alt="Distribrewtion"/>
             </a>
+
             <div className="content">
-                <React.Suspense fallback={<em>Loading...</em>}>
+                <React.Suspense fallback={<h1>Loading...</h1>}>
                     <Router>
                         <Routes path="*"/>
                     </Router>
@@ -22,4 +23,4 @@ export const App = () => (
             </div>
         </div>
     </Root>
-);
+)

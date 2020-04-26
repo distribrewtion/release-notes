@@ -1,18 +1,18 @@
 import React from 'react'
-import {useRouteData} from "react-static";
-import {Release} from "types/index";
-import {ReleaseTitle} from "components/release-title";
-import {ReleaseContent} from "components/release-content";
-import {Link} from "@reach/router";
+import {useRouteData} from 'react-static'
+import {Release} from 'types'
+import {Link} from '@reach/router'
+import {ReleaseTitle} from 'components/release-title'
+import {ReleaseContent} from 'components/release-content'
 
 export default () => {
-    const {releases}: {releases: Release[]} = useRouteData()
+    const {releases}: { releases: Release[] } = useRouteData()
     return (
         <>
             <h1>Distribrewtion Releases</h1>
             <h2>{releases.length} releases and counting 🎉</h2>
-            {releases.map((release, index) =>
-                <React.Fragment key={index}>
+            {releases.map(release =>
+                <React.Fragment key={release.date}>
                     <hr/>
                     <section>
                         <Link to={`/releases/${release.date}`}>
@@ -23,5 +23,5 @@ export default () => {
                 </React.Fragment>
             )}
         </>
-    );
+    )
 }
