@@ -4,6 +4,7 @@ import {Release} from 'types'
 import {Link} from '@reach/router'
 import {ReleaseTitle} from 'components/release-title'
 import {ReleaseContent} from 'components/release-content'
+import {releasePath} from '../path'
 
 export default () => {
     const {releases}: { releases: Release[] } = useRouteData()
@@ -15,7 +16,7 @@ export default () => {
                 <React.Fragment key={release.date}>
                     <hr/>
                     <section>
-                        <Link to={`/releases/${release.date}`}>
+                        <Link to={releasePath(release)}>
                             <ReleaseTitle release={release}/>
                         </Link>
                         <ReleaseContent release={release}/>

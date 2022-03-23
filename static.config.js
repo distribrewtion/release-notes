@@ -4,11 +4,8 @@ import jdown from 'jdown'
 
 // Typescript support in static.config.js is not yet supported, but is coming in a future update!
 
-const sortReleases = (a, b) => {
-  if (a.date < b.date) return 1
-  if (a.date > b.date) return -1
-  return 0
-}
+const sortString = (value) => `${value.date}-${value.build || 0}`
+const sortReleases = (a, b) => sortString(b).localeCompare(sortString(a))
 
 export default {
   entry: path.join(__dirname, 'src', 'index.tsx'),
@@ -19,7 +16,7 @@ export default {
         path: '/',
         getData: () => ({releases}),
         children: releases.map(release => ({
-          path: `/releases/${release.date}`,
+          path: `/releases/${release.build || release.date}`,
           template: 'src/containers/release',
           getData: () => ({release}),
         })),

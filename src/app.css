@@ -29,3 +29,8 @@ hr {
   padding: 1rem;
   max-width: 600px;
 }
+
+.release-attribute {
+  font-size: smaller;
+  color: darkgray;
+}

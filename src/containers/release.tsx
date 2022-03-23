@@ -4,6 +4,7 @@ import {Link} from '@reach/router'
 import {Release} from '../../types'
 import {ReleaseTitle} from 'components/release-title'
 import {ReleaseContent} from 'components/release-content'
+import {ReleaseAttributes} from 'components/release-attributes'
 
 export default () => {
     const {release}: { release: Release } = useRouteData()
@@ -15,6 +16,7 @@ export default () => {
             <hr/>
             <ReleaseTitle release={release}/>
             <ReleaseContent release={release}/>
+            <ReleaseAttributes release={release}/>
         </>
     )
 }
