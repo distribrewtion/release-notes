@@ -13,7 +13,7 @@ export default () => {
             <h1>Distribrewtion Releases</h1>
             <h2>{releases.length} releases and counting 🎉</h2>
             {releases.map(release =>
-                <React.Fragment key={release.date}>
+                <React.Fragment key={`${release.date}${release.build ? `-${release.build}` : ''}`}>
                     <hr/>
                     <section>
                         <Link to={releasePath(release)}>
